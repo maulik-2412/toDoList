@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Reddit+Sans+Condensed:wght@200..900&display=swap');
+
+html {
+  text-align: center;
+  font-family: "Reddit Sans Condensed", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background: linear-gradient(334deg, #ee4e4e, #ffc700, #219c90);
+  background-size: 180% 180%;
+  
+  -webkit-animation: gradient-animation 6s ease infinite;
+  animation: gradient-animation 6s ease infinite;
+  margin: 0;
+  height: 100vh;
+}
+
+@-webkit-keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  color: #ffc700;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #fff455;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.757);
+}
+
+#heading {
+  background-color: #ee4e4e;
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ee4e4e;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+input:checked + p {
+  text-decoration: line-through;
+  text-decoration-color: #ee4e4e;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #219c90;
+}
+
+form {
+  text-align: center;
+  margin-left: 20px;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #ee4e4e;
+  color: #ffc700;
+  font-size: 30px;
+  padding-bottom: 2px;
+  border-width: 0;
+}
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #ee4e4e;
+}

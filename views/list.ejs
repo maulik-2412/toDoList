@@ -1,0 +1,26 @@
+<%- include("header") -%>
+       
+    <div class="box" id="heading">
+        <h1><%= day %></h1>
+    </div>
+        <div class="box">
+            <% for(let task of tasks){%>
+                <form action="/delete" method="post" >
+                <div class="item">
+                    <input type="checkbox" name="checkbox" value="<%= task._id %>" onchange="this.form.submit()">
+                    <input type="hidden" name="day" value="<%= day %>">
+                    <p>
+                    <%= task.name %>
+                    </p>
+                </div>
+            </form>
+            <%}%>
+            <form action="/" method="post">
+                <input type="text" name="task" placeholder="New Task">
+                <button type="submit" name="button" value="<%= day %>">+</button>
+            </form>
+        </div>  
+            
+<%- include("footer") -%>       
+        
+ 
