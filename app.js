@@ -7,12 +7,15 @@ const app=express();
 const _ = require("lodash");
 require('dotenv').config();
 
-main().catch((err)=>console.log(err));
+
 
 
 async function main() {
-    await mongoose.connect("mongodb+srv://"+process.env.DB_USERNAME+":"+process.env.DB_PASSWORD+"@cluster0.iiz1a.mongodb.net/toDoDB");
+    await mongoose.connect(process.env.MONGODB_URI+"toDoDB");
 }
+
+main().catch((err)=>console.log(err));
+
 const taskSchema=new mongoose.Schema({
     name:String
 })
