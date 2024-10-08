@@ -11,7 +11,7 @@ require('dotenv').config();
 
 
 async function main() {
-    await mongoose.connect(process.env.MONGODB_URI+"toDoDB");
+    await mongoose.connect("mongodb+srv://"+process.env.DB_USERNAME+":"+process.env.DB_PASSWORD+"@cluster0.iiz1a.mongodb.net/toDoDB");
 }
 
 main().catch((err)=>console.log(err));
